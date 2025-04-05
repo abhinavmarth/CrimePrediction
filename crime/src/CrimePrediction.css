@@ -1,0 +1,144 @@
+/* Slideshow Background Styles */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slideshow 30s infinite;
+    transition: background-image 2s ease-in-out;
+    opacity: 0.9;
+  }
+  
+  /* Slideshow Keyframes with 10 images */
+  @keyframes slideshow {
+    0%    { background-image: url('https://ts4.mm.bing.net/th?id=OIP.JECjnAV5T5IldizQjS-K4gHaE8&pid=15.1'); }
+    10%   { background-image: url('https://ts1.mm.bing.net/th?id=OIP.ukaQmuZWBX1oKXiJE7cHuwHaE7&pid=15.1'); }
+    20%   { background-image: url('https://th.bing.com/th/id/OIP.gbFzD8Tw__W0wBZUVWak2gHaE8?w=208&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    30%   { background-image: url('https://th.bing.com/th/id/OIP.XA7AOYB_ojq3S3UAF95AygHaEQ?w=360&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    40%   { background-image: url('https://th.bing.com/th/id/OIP.mh_j4LYNCoUkQQ8xfn09CwHaE8?w=286&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    50%   { background-image: url('https://th.bing.com/th/id/OIP.5SktLBT-W3mE95_YJF7tbAHaFj?w=197&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    60%   { background-image: url('https://th.bing.com/th/id/OIP.YPH_B9OsVvLfNBRtmVSM4QHaEU?w=282&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    70%   { background-image: url('https://th.bing.com/th/id/OIP.RsMy67t0MhCzDSfgoCcs8wHaDm?w=278&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    80%   { background-image: url('https://th.bing.com/th/id/OIP.meWon4ClOjctkAC1ywraVwHaEr?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    90%   { background-image: url('https://th.bing.com/th/id/OIP.BOpBAvpcR10rp19WlTM6EwHaD4?w=302&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); }
+    100%  { background-image: url('https://ts4.mm.bing.net/th?id=OIP.JECjnAV5T5IldizQjS-K4gHaE8&pid=15.1'); }
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Main Container */
+  .container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9); /* slightly transparent */
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1;
+  }
+  
+  .container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  
+  /* Dropdown Label */
+  label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #34495e;
+    text-align: left;
+  }
+  
+  /* Select Dropdown */
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.3);
+  }
+  
+  /* View Map Button */
+  .view-map-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #f39c12, #e67e22);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+  }
+  
+  .view-map-btn:hover {
+    background: linear-gradient(to right, #d35400, #e67e22);
+    transform: translateY(-2px);
+  }
+  
+  /* Error Message */
+  .error {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  
+  /* Loading State */
+  .loading {
+    color: #2980b9;
+    font-weight: 500;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  
